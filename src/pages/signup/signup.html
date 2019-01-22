@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    
+        <ion-icon type='button' side="left" name="menu" (click)="fun4()"> </ion-icon>
+    <!-- <button ion-button block (click)="navigateToMenuPage()">Menu</button> -->
+  <div padding>
+    <button primary block  (click)="fun1()">Heart Rate</button>{{heart_rate}}
+  </div>
+  <div padding>
+    <button primary block  (click)="fun2()">Oxygen level</button>{{o_level}}
+  </div>
+  <div padding>
+    <button primary block  (click)="fun3()">Temperature</button>{{temp}}
+  </div>
+  <ion-item class="item-leave-height">
+      <ion-label>Select Record</ion-label>
+      <ion-select [(ngModel)]="selectedLeave">
+          <ion-option value="CASUAL LEAVE">One Day</ion-option>
+          <ion-option value="COMP OFF">One Week</ion-option>
+          <ion-option value="EARNED LEAVE">One Month</ion-option>
+      </ion-select>
+  </ion-item>
+  
+</ion-content> 
